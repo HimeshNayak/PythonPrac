@@ -17,16 +17,25 @@ def guessthenum():
     quit()
 
 def listcomm():
-    a = random.sample(range(100),8)
-    b = random.sample(range(100),10)
-    print(a)
-    print(b)
-    c = list()
-    for numa in a:
-        for numb in b:
-            if numa == numb :
-                c.append(numb)
-                continue
+    c = [1]
+    count = 1
+    while len(c) != 0 :
+        a = random.sample(range(100),5)
+        b = random.sample(range(100),5)
+        print('\n')
+        print('Try no. :',count)
+        print(a)
+        print(b)
 
+        for numa in a:
+            for numb in b:
+                if numa == numb :
+                    c.append(numb)
+                    continue
+        if len(c) != 1:
+            c.remove(1)
+            break
+        count +=1
     print(c)
+        
 listcomm()
