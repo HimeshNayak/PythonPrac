@@ -15,4 +15,18 @@ def guessthenum():
         ch = input('Do you want to play again?  (Y/N) : \n')
     print('Thank you for playing!!! ')
     quit()
-guessthenum()
+
+def listcomm():
+    a = random.sample(range(100),8)
+    b = random.sample(range(100),10)
+    print(a)
+    print(b)
+    c = list()
+    for numa in a:
+        for numb in b:
+            if numa == numb :
+                c.append(numb)
+                continue
+
+    print(c)
+listcomm()
